@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <%@include file="partials/head.jsp"%>
     <%@include file="partials/navbar.jsp"%>
 
     <c:if test="true">
