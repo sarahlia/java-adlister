@@ -24,6 +24,8 @@
 </head>
 
 <body>
+    <%@include file="partials/navbar.jsp"%>
+
     <form action="/login.jsp" method="post">
         <div>
             <label for="username">Username</label>
