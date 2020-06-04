@@ -6,19 +6,23 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<%--<%--%>
-<%--    if ( request.getParameter("username").equalsIgnoreCase("admin") && request.getParameter("password").equalsIgnoreCase("password") ) {--%>
-<%--        response.sendRedirect("/profile.jsp");--%>
-<%--    } else {--%>
-<%--        response.sendRedirect("/login.jsp");--%>
-<%--    }--%>
-<%--%>--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    if(request.getMethod().equalsIgnoreCase("post")) {
+        if(request.getParameter("username").equalsIgnoreCase("admin") && request.getParameter("password").equalsIgnoreCase("password")) {
+            response.sendRedirect("/profile.jsp");
+        }
+//    else {
+//        response.sendRedirect("/login.jsp");
+//    }
+    }
+%>
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Login Page</title>
 </head>
+
 <body>
     <form action="/login.jsp" method="post">
         <div>
@@ -29,6 +33,8 @@
             <label for="password">Password</label>
             <input type="password" id="password" name="password">
         </div>
+        <input type="submit">
     </form>
 </body>
+
 </html>
