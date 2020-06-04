@@ -3,18 +3,19 @@
 <html>
 
 <head>
-    <title><%= "some title" %></title>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Welcome." />
+    </jsp:include>
 </head>
 
 <body>
-    <%@include file="partials/head.jsp"%>
     <%@include file="partials/navbar.jsp"%>
 
     <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
+        <h3>Variable names should be very descriptive</h3>
     </c:if>
     <c:if test="false">
-        <h1>single letter variable names are good</h1>
+        <h3>single letter variable names are good</h3>
     </c:if>
 </body>
 

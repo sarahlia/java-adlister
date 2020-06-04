@@ -9,13 +9,17 @@
 <html>
 
 <head>
-    <title>Title</title>
+    <jsp:include page="partials/head.jsp">
+        <jsp:param name="title" value="Profile"/>
+    </jsp:include>
 </head>
 
 <body>
-    <%@include file="partials/head.jsp"%>
     <%@include file="partials/navbar.jsp"%>
 
+    <div class="container">
+        <h3>Viewing your profile</h3>
+    </div>
 
 </body>
 
