@@ -21,9 +21,10 @@
         <h3>Here are all the ads:</h3>
 
         <c:forEach var="ad" items="${ads}">
-            <div class="ad">
+            <div id="ad-${ad.id}">
                 <h3>${ad.title}</h3>
                 <p>${ad.description}</p>
+                <span>posted by ${ad.userId}</span>
             </div>
         </c:forEach>
     </div>
