@@ -1,6 +1,7 @@
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads{
@@ -22,20 +23,27 @@ public class MySQLAdsDao implements Ads{
 
     @Override
     public List<Ad> all() {
+
+        List<Ad> ads = new ArrayList<>();
+
         try {
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM ads");
             while(rs.next()) {
-                System.out.println("rs.getLong() = " + rs.getLong("id"));
-                System.out.println("rs.getString() = " + rs.getString("title"));
-                System.out.println("rs.getString() = " + rs.getString("description"));
+                //translating the ResultSet into a java obj of the type Ad
+                ads.add(new Ad(
+                        rs.getLong("id"),
+                        rs.getLong("user_id"),
+                        rs.getString("title"),
+                        rs.getString("description")
+                ));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
 
-        return null;
+        return ads;
     }
 
     @Override
