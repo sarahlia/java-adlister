@@ -40,7 +40,7 @@ public class MySQLAdsDao implements Ads{
 
     @Override
     public Long insert(Ad ad) {
-        String query = String.format( ("INSERT INTO ads (user_id, title, description) VALUES (%s, %s, %s)"), ad.getUserId(), ad.getTitle(), ad.getDescription()  );
+        String query = String.format("INSERT INTO ads (user_id, title, description) VALUES (%s, '%s', '%s')", ad.getUserId(), ad.getTitle(), ad.getDescription());
 
         System.out.println("query = " + query);
         try {
