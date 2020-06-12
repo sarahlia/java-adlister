@@ -15,6 +15,13 @@ public class User {
         this.password = password;
     }
 
+    //add a 3-parameter constructor to be used by RegisterServlet
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
     public long getId() {
         return id;
     }
