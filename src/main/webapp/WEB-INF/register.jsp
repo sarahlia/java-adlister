@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" class="form-control" type="text">
+            <input id="email" name="email" class="form-control" type="email">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
@@ -33,7 +33,7 @@
             <label for="confirm_password">Confirm Password</label>
             <input id="confirm_password" name="confirm_password" class="form-control" type="password">
         </div>
-        <input type="submit" class="btn btn-primary btn-block">
+        <input type="submit" class="btn btn-primary btn-block" value="Register">
     </form>
 </div>
 </body>
