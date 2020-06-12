@@ -15,7 +15,6 @@ public class MySQLAdsDao implements Ads {
 
     public MySQLAdsDao(Config config) {
         try {
-
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                 config.getUrl(),
@@ -43,8 +42,9 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Long insert(Ad ad) {
+        String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
 
             stmt.setLong(1, ad.getUserId());
