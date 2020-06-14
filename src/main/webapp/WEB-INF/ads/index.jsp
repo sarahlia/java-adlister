@@ -15,10 +15,19 @@
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2><c:out value="${ad.title}" /></h2>
+            <p>Ad id#<c:out value="${ad.id}" /></p>
             <p><c:out value="${ad.description}" /></p>
-            <p>Created by: <c:out value="${ad.userId}" /></p>
+            <p>Created by user id: <c:out value="${ad.userId}" /></p>
         </div>
     </c:forEach>
+
+<%--    <c:forEach var="user" items="${users}">--%>
+<%--        <div class="col-md-6">--%>
+<%--            <p>name<c:out value="${ad.user.getUsername}" /></p>--%>
+<%--        </div>--%>
+<%--    </c:forEach>--%>
+
+
 </div>
 
 </body>
