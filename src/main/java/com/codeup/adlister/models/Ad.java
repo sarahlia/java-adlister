@@ -22,9 +22,11 @@ public class Ad {
         this.description = description;
     }
 
-//    public Ad(long userId, String username) {
+//    public Ad(long userId, String username, String title, String description) {
 //        this.userId = userId;
 //        user.username = username;
+//        this.title = title;
+//        this.description = description;
 //    }
 
     public long getId() {

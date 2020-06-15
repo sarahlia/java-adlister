@@ -13,7 +13,10 @@ import java.io.IOException;
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
-        request.setAttribute("users", DaoFactory.getUsersDao().findByUsername("hgranger"));
+
+//        String username = request.getParameter("username");
+
+        request.setAttribute("users", DaoFactory.getUsersDao());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 }
