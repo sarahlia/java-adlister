@@ -22,6 +22,7 @@
             <p>Ad id#<c:out value="${ad.id}" /></p>
             <p><c:out value="${ad.description}" /></p>
             <p>Created by user id: <c:out value="${ad.userId}" /></p>
+<%--            <p>Created by name: <c:out value="${user.username}" /></p>--%>
         </div>
     </c:forEach>
 
