@@ -12,8 +12,8 @@
 <div class="container">
     <h1>Here are all the ads!</h1>
 
-    <p>name=<c:out value="${user.username}" /></p>
-    <p>email=<c:out value="${user.email}" /></p>
+<%--    <p>name=<c:out value="${user.username}" /></p>--%>
+<%--    <p>email=<c:out value="${user.email}" /></p>--%>
 
 
     <c:forEach var="ad" items="${ads}">

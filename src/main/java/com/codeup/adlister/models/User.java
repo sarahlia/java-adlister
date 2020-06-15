@@ -1,5 +1,6 @@
 package com.codeup.adlister.models;
 
+import com.codeup.adlister.util.Password;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class User {
@@ -52,8 +53,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = BCrypt.hashpw(password, BCrypt.gensalt());
-//        System.out.println(this.password);
+        this.password = Password.hash(password);
     }
 
 
